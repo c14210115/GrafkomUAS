@@ -1482,10 +1482,12 @@ public class Main {
             camera.moveRight(0.01f);
         }
         if(window.isKeyPressed(GLFW_KEY_UP) && playerbrp==0){
-            camera.moveUp(0.01f);
+//            camera.moveUp(0.01f);
+            camera.addRotation((float)Math.toRadians(-0.3f),0);
         }
         if(window.isKeyPressed(GLFW_KEY_DOWN) && playerbrp==0){
-            camera.moveDown(0.01f);
+//            camera.moveDown(0.01f);
+            camera.addRotation((float)Math.toRadians(0.3f),0);
         }
         if(window.isKeyPressed(GLFW_KEY_RIGHT) && playerbrp==0){
             camera.addRotation(0,(float)Math.toRadians(0.7f));
@@ -1493,6 +1495,20 @@ public class Main {
         if(window.isKeyPressed(GLFW_KEY_LEFT) && playerbrp==0){
             camera.addRotation(0,(float)Math.toRadians(-0.7f));
         }
+
+
+
+        if(window.isKeyPressed(GLFW_KEY_UP) && playerbrp==1){
+            camera.addRotation((float)Math.toRadians(-0.3f),0);
+        }
+        if(window.isKeyPressed(GLFW_KEY_DOWN) && playerbrp==1){
+            camera.addRotation((float)Math.toRadians(0.3f),0);
+        }
+
+
+
+
+
 
 
         // gerakan tnak
@@ -1859,3 +1875,4 @@ public class Main {
         new Main().run();
     }
 }
+
